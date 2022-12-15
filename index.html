@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Шифрование файлов RSA</title>
+    <style>
+        div {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST" enctype="multipart/form-data">
+        <div>
+            <h3>Шифрование</h3>
+        </div>
+        <div>
+            <div style="display: inline; margin: 0;">Ключ: <input type="file" name="key" /></div>
+        </div>
+        <div>
+            <div style="display: inline; margin: 0;">Файл: <input type="file" name="file" /></div>
+        </div>
+        <div>
+            <div style="display: inline; margin: 0;">Операция: <select name="type">
+                    <option selected value="1">Шифрование</option>
+                    <option value="0">Дешифрование</option>
+                </select></div>
+        </div>
+        <div>
+            <input type="submit" />
+        </div>
+    </form>
+    <form action="./keys">
+        <div>
+            <h3>Ключи</h3>
+        </div>
+        <div>
+            <input type="submit" value="Создать ключи" />
+        </div>
+    </form>
+</body>
+</html>
